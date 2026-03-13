@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>World Cup Budget Calculator</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+
+body{
+font-family:Arial;
+background:#f4f4f4;
+text-align:center;
+}
+
+.container{
+background:white;
+max-width:700px;
+margin:auto;
+padding:30px;
+margin-top:40px;
+}
+
+input,select{
+padding:10px;
+width:70%;
+margin:10px;
+}
+
+button{
+padding:12px 20px;
+background:#27ae60;
+color:white;
+border:none;
+cursor:pointer;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>World Cup Travel Cost Calculator</h1>
+
+<p>Estimate the cost of your World Cup trip.</p>
+
+<select id="flight">
+<option value="1200">Traveling from USA</option>
+<option value="1500">Traveling from Europe</option>
+<option value="2000">Traveling from Africa</option>
+<option value="1800">Traveling from Asia</option>
+</select>
+
+<br>
+
+<input id="matches" placeholder="Number of matches">
+
+<input id="days" placeholder="Trip length in days">
+
+<select id="style">
+<option value="100">Budget travel</option>
+<option value="200">Standard travel</option>
+<option value="350">Luxury travel</option>
+</select>
+
+<br>
+
+<button onclick="calc()">Calculate Trip Cost</button>
+
+<h2 id="result"></h2>
+
+</div>
+
+<script>
+
+function calc(){
+
+let flight=parseInt(document.getElementById("flight").value)
+
+let matches=document.getElementById("matches").value*150
+
+let days=document.getElementById("days").value*
+document.getElementById("style").value
+
+let total=flight+matches+days
+
+document.getElementById("result").innerHTML=
+"Estimated Trip Cost: $" + total
+
+}
+
+</script>
+
+</body>
+
+</html>
